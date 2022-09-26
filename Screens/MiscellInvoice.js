@@ -18,7 +18,7 @@ const MiscellInvoice = ({navigation}) => {
       <View style={{marginTop: '-30%', marginBottom: '25%'}}>
       <ImageBackground
       source={require('../assets/Invoice3.png')}
-      style={{height: '95%', width: '100%', elevation: 9,}}>
+      style={{height: '100%', width: '100%', elevation: 9,}}>
       
        <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginTop: '4%'}}>
         <View style={styles.ArrowStyle}></View>

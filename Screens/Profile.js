@@ -11,10 +11,24 @@ import React from 'react';
 import BottomNav from '../Components/BottomNav';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Entypo from 'react-native-vector-icons/Entypo';
+import ImagePicker from 'react-native-image-crop-picker';
 
 
 
 const Profile = ({navigation}) => {
+
+
+const openGallery = () => {
+  ImagePicker.openPicker({
+    width: 300,
+    height: 400,
+    cropping: true,
+  }).then(image => {
+    console.log(image);
+  });
+}
+
+
   return (
     <>
       <StatusBar backgroundColor="#ffffff" />
@@ -34,26 +48,52 @@ const Profile = ({navigation}) => {
             <Text style={styles.NavText}>Profile</Text>
           </View>
 
-        <View style={styles.CircleStyle}></View>
+        <View style={styles.CircleStyle}>
+        </View>
+
+        <TouchableOpacity 
+        style={{
+          position: 'absolute',
+          top: '14%', 
+          right: '15%', 
+          backgroundColor: '#ffffff', 
+          paddingVertical: 6, 
+          paddingHorizontal: 12, 
+          borderRadius: 5}}
+          activeOpacity={0.7}
+          onPress={()=>navigation.navigate('EditProfile')}
+          >
+            <Text style={{color: '#000000', fontWeight: '500'}}>Edit Profile</Text>
+        </TouchableOpacity>
 
         <View style={{justifyContent: 'center', alignItems: 'center'}}>
         <View style={styles.ImgContainer}>
         <Image source={require('../assets/Avtar.png')} style={{height: 250, width: 250}}/>
 
-        <Entypo name='pencil' size={25} color= '#000000' style={{position: 'absolute', right: 10, bottom: 10,}}/>
+        <TouchableOpacity style={{position: 'absolute', bottom: 20, right: 20}} onPress={openGallery}>
+        <Entypo name='pencil' size={25} color= '#000000' style={{}}/>
+        </TouchableOpacity>
+
         </View>
         </View>
 
 
         <View style={styles.textContainer}>
+
             <Text style={styles.textStyle}>Staff Name</Text>
+
             <Text style={styles.textStyle}>Staff ID: 372538636</Text>
+
             <Text style={styles.textStyle}>9555123085</Text>
+
             <Text style={styles.textStyle}>staffmember@gmail.com</Text>
-            <TouchableOpacity>
+
+            <TouchableOpacity onPress={()=>navigation.navigate('Login')}>
             <Text style={[styles.textStyle,{color: '#3342a3'}]}>Log Out</Text>
             </TouchableOpacity>
+
             <Text style={{marginTop: '5%', color: '#0a5ccf'}}>Terms & Privacy Policy</Text>
+
         </View>
 
         </ScrollView>
@@ -102,7 +142,7 @@ const styles = StyleSheet.create({
     width: '80%',
     backgroundColor: '#ffffff',
     borderRadius: 12,
-    marginTop: '-50%',
+    marginTop: '-40%',
     justifyContent: 'center',
     alignItems: 'center',
     elevation: 5,

@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import {  } from 'react-native';
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -21,12 +21,11 @@ import MiscellInvoice from './Screens/MiscellInvoice';
 import ExpansesInvoice from './Screens/ExpansesInvoice';
 import DepositInvoice from './Screens/DepositInvoice';
 import ChatBox from './Screens/ChatBox';
-
+import EditProfile from './Screens/EditProfile';
 
 
 
 const Stack = createNativeStackNavigator();
-
 
 const App = () => {
   return (
@@ -51,13 +50,10 @@ const App = () => {
         <Stack.Screen name="ExpansesInvoice" component={ExpansesInvoice} />
         <Stack.Screen name="DepositInvoice" component={DepositInvoice} />
         <Stack.Screen name="ChatBox" component={ChatBox} />
+        <Stack.Screen name="EditProfile" component={EditProfile} />
       </Stack.Navigator>
     </NavigationContainer>
   )
 }
 
 export default App
-
-const styles = StyleSheet.create({
-
-});

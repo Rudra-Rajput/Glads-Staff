@@ -9,9 +9,8 @@ import {
 } from 'react-native';
 import React from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import AntDesign from 'react-native-vector-icons/AntDesign';
-import SelectDropdown from 'react-native-select-dropdown';
 import RadioButtonRN from 'radio-buttons-react-native';
+import ImagePicker from 'react-native-image-crop-picker';
 
 
 
@@ -21,6 +20,17 @@ const data = [
   {label: 'In'},
   {label: 'Out'}
 ]
+
+
+const openGallery = () => {
+  ImagePicker.openPicker({
+    width: 300,
+    height: 400,
+    cropping: true
+  }).then(image => {
+    console.log(image);
+  });
+}
 
 
   return (
@@ -154,7 +164,7 @@ const data = [
               marginTop: '20%',
               marginBottom: '5%',
             }}>
-            <TouchableOpacity activeOpacity={0.6}>
+            <TouchableOpacity activeOpacity={0.6} onPress={openGallery}>
               <View style={styles.buttomContainer}>
                 <Text style={styles.textStyle}>Add Attachment</Text>
               </View>

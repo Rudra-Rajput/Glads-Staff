@@ -38,7 +38,7 @@ const DashBoard = ({navigation}) => {
 
               <Text
                 style={{
-                  marginLeft: 24,
+                  marginLeft: '15%',
                   fontSize: 20,
                   fontWeight: '500',
                   color: '#ffffff',
@@ -49,7 +49,7 @@ const DashBoard = ({navigation}) => {
             </View>
             <Text
               style={{
-                marginLeft: '25%',
+                marginLeft: '35%',
                 marginTop: '-6%',
                 fontWeight: '400',
                 color: '#ffffff',
@@ -63,7 +63,7 @@ const DashBoard = ({navigation}) => {
             style={{
               justifyContent: 'center',
               alignItems: 'center',
-              marginTop: 6,
+              marginTop: 15,
             }}>
             <Text style={{fontSize: 25, color: '#000000', fontWeight: '500'}}>
               Generate Invoices
@@ -199,7 +199,7 @@ const styles = StyleSheet.create({
     borderRadius: 60,
     borderWidth: 1,
     marginTop: 14,
-    marginLeft: 5,
+    marginLeft: 12,
     borderColor: '#ffffff',
     justifyContent: 'center',
     alignItems: 'center',
@@ -211,11 +211,11 @@ const styles = StyleSheet.create({
   },
 
   Cardstyle: {
-    height: 130,
-    width: 130,
+    height: 120,
+    width: 120,
     backgroundColor: '#ffffff',
     marginHorizontal: '5%',
-    marginTop: '-94%',
+    marginTop: '-88%',
     borderRadius: 8,
     justifyContent: 'center',
     alignItems: 'center',
@@ -223,11 +223,11 @@ const styles = StyleSheet.create({
   },
 
   Cardstyle2: {
-    height: 130,
-    width: 130,
+    height: 120,
+    width: 120,
     backgroundColor: '#ffffff',
     marginHorizontal: '5%',
-    marginTop: '-53%',
+    marginTop: '-45%',
     borderRadius: 8,
     justifyContent: 'center',
     alignItems: 'center',
@@ -235,10 +235,10 @@ const styles = StyleSheet.create({
   },
 
   Cardstyle3: {
-    height: 130,
-    width: 130,
+    height: 120,
+    width: 120,
     backgroundColor: '#ffffff',
-    marginTop: '-11%',
+    marginTop: '-1%',
     borderRadius: 8,
     justifyContent: 'center',
     alignItems: 'center',

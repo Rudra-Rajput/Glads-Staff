@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import SelectDropdown from 'react-native-select-dropdown';
+import ImagePicker from 'react-native-image-crop-picker';
 
 
 
@@ -12,6 +13,17 @@ const Costumer = ({navigation}) => {
   
   const [Product, setProduct] = useState ();
 
+
+
+const openGallery = () => {
+  ImagePicker.openPicker({
+    width: 300,
+    height: 400,
+    cropping: true
+  }).then(image => {
+    console.log(image);
+  });
+}
 
 
   return (
@@ -117,7 +129,7 @@ const Costumer = ({navigation}) => {
 
 <View style={{justifyContent: 'space-around', alignItems: 'center', flexDirection: 'row', marginHorizontal: '8%', marginTop: '20%', marginBottom: '5%'}}>
 
-<TouchableOpacity activeOpacity={0.6}>
+<TouchableOpacity activeOpacity={0.6} onPress={openGallery}>
     <View style={styles.buttomContainer}>
         <Text style={styles.textStyle}>Add Attachment</Text>
     </View>
